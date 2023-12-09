@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_example/authorization/sign_in/sign_in.dart';
-import 'package:firebase_example/home/home_page.dart';
+import 'package:firebase_example/ui/authorization/sign_in/sign_in.dart';
+import 'package:firebase_example/ui/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -37,14 +37,12 @@ class SignUpPage extends StatelessWidget {
             const SizedBox(height: 32),
             TextField(
               controller: email,
-              decoration: const InputDecoration(
-                  border: OutlineInputBorder(), label: Text("Email")),
+              decoration: const InputDecoration(border: OutlineInputBorder(), label: Text("Email")),
             ),
             const SizedBox(height: 20),
             TextField(
               controller: password,
-              decoration: const InputDecoration(
-                  border: OutlineInputBorder(), label: Text("password")),
+              decoration: const InputDecoration(border: OutlineInputBorder(), label: Text("password")),
             ),
             const SizedBox(height: 20),
             MaterialButton(
@@ -52,8 +50,7 @@ class SignUpPage extends StatelessWidget {
               onPressed: () async {
                 try {
                   UserCredential user =
-                      await auth.createUserWithEmailAndPassword(
-                          email: email.text, password: password.text);
+                      await auth.createUserWithEmailAndPassword(email: email.text, password: password.text);
                   Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(

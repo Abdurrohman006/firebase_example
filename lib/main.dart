@@ -1,10 +1,11 @@
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_example/authorization/sign_in/sign_in.dart';
+import 'package:firebase_example/ui/authorization/sign_in/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  //////////// Firebase Initialize qilish //////////////////
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
